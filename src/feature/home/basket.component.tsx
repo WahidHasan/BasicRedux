@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { cartType, decreaseQuantity, removeFromCart } from "../../core/redux/slices/basket";
+import { cartType, decreaseQuantity, emptyCart, removeFromCart } from "../../core/redux/slices/basket";
 import { BasketState } from "../../core/redux/store";
 
 const Basket = () => {
@@ -9,8 +9,9 @@ const Basket = () => {
   return (
     <div className="list-style">
       <header>
-        <h3>
+        <h3  className="basket-list">
           <i className="fas fa-dolly" area-hidden="true"></i> Basket
+          <span className="clear-basket"><i className="fas fa-trash" onClick={() => dispatch(emptyCart())} area-hidden="true"></i></span>
         </h3>
       </header>
       <ul className="basket">
