@@ -58,9 +58,13 @@ const basketSlice = createSlice({
          }
         }
       },
-      // removeFromCart: (state) => {
-      //   state.count = state.count - 1;
-      // },
+
+      removeFromCart: (state, action: PayloadAction<number>) => {
+        const cartItem = state.cart.filter((item)=> item.id !== action.payload);
+        return {
+          ...state.cart, cart: cartItem
+        }
+      },
       // increaseQuantity: (state) => {
       //   state.count = state.count - 1;
       // },
@@ -81,5 +85,5 @@ const basketSlice = createSlice({
       // },
     }
   });
-  export const { addToCart, decreaseQuantity } = basketSlice.actions;
+  export const { addToCart, decreaseQuantity, removeFromCart } = basketSlice.actions;
   export const BasketReducer = basketSlice.reducer

@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { cartType, decreaseQuantity } from "../../core/redux/slices/basket";
+import { cartType, decreaseQuantity, removeFromCart } from "../../core/redux/slices/basket";
 import { BasketState } from "../../core/redux/store";
 
 const Basket = () => {
@@ -18,7 +18,7 @@ const Basket = () => {
           products.length > 0 &&
           products.map((val: cartType) => (
             <li className="parent-list" key={val.id}>
-              <i className="fas fa-minus-square" onClick={() => dispatch(decreaseQuantity(val.id))}></i>{" "}
+              <i className="fas fa-minus-square" onClick={val.quantity! > 1 ?() => dispatch(decreaseQuantity(val.id)) : () => dispatch(removeFromCart(val.id))}></i>{" "}
               <span className="quantity-class">{val.quantity}</span> {val.name}
             </li>
           ))}
