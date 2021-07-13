@@ -11,8 +11,8 @@ const ProductList = () => {
   const dispatch = useDispatch();
 
   const handleProductAdd=(productItem: ProductListData)=>{
-    const checkProduct = products.findIndex((item)=>item.id === productItem.id);
-    if(checkProduct >=0 ){
+    const checkProduct = products?.findIndex((item)=>item.id === productItem.id);
+    if(checkProduct! >= 0 ){
       dispatch(increaseQuantity(productItem));
     }
     else
