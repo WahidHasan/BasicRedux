@@ -13,7 +13,7 @@ const TestComponent = () => {
     return (
         <div className="list-style">
             <ul className="todo">
-                {testList.todos?.map((item: todo)=>{
+                {testList.loading ? <><i className="fas fa-sync fa-spin fa-5x mt-5"></i></> : testList.todos?.map((item: todo)=>{
                     return(<li className="todo-list" key={item.id}>{item.title} {item.completed ? <i className="fas fa-check" area-hidden="true"></i> : <i className="fas fa-times" area-hidden="true"></i>}</li>)
                 })}
             </ul>
