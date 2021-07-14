@@ -20,7 +20,7 @@ const Navigation = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/test">With Api</NavLink>
+          <NavLink to="/test">Todo</NavLink>
         </li>
         {location.pathname === "/" ? (
           <>
