@@ -5,13 +5,14 @@ import { BasketState } from "../../core/redux/store";
 
 const Basket = () => {
   const products = useSelector((state: BasketState) => state.basket.cart);
+  const totalProducts = useSelector((state: BasketState) => state.basket.cartItems);
   const dispatch = useDispatch();
   return (
     <div className="list-style">
       <header>
         <h3  className="basket-list">
           <i className="fas fa-dolly" area-hidden="true"></i> Basket
-          <span className="clear-basket"><i className="fas fa-trash" onClick={() => dispatch(emptyCart())} area-hidden="true"></i></span>
+         {totalProducts! > 0 ? <span className="clear-basket"><i className="fas fa-trash" onClick={() => dispatch(emptyCart())} area-hidden="true"></i></span> : <></>} 
         </h3>
       </header>
       <ul className="basket">

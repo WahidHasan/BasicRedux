@@ -11,7 +11,7 @@ const Navigation = () => {
   let location = useLocation();
   return (
     <div>
-      <h1>Basket</h1>
+      <h1>Woo Cart</h1>
       <ul className="nav-header">
         <li>
           <NavLink exact to="/">
