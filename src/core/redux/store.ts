@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { combineReducers } from 'redux'
 import { BasketReducer } from './slices/basket';
-import { TestReducer } from './slices/test-api';
+import { TestReducer } from './slices/test-slice';
 
 const BasicCartReducer = combineReducers({
  basket: BasketReducer,

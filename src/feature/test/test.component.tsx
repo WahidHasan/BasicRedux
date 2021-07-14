@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchTestApi, todo } from '../../core/redux/slices/test-api'
+import { fetchTestApi, todo } from '../../core/redux/slices/test-slice'
 import { BasketState } from '../../core/redux/store'
 
 const TestComponent = () => {

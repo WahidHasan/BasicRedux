@@ -29,7 +29,7 @@ function GetInitialState(): InitialState {
 }
 
 const testSlice = createSlice({
-    name: "test",
+    name: "testy",
     initialState: GetInitialState(),
     reducers: {
         getTodos: (state)=>{
