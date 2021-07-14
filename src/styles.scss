@@ -84,6 +84,12 @@ ul.products li:nth-child(odd), ul.basket li:nth-child(odd) {
   float: right;
 }
 
+.main-basket{
+  float: right;
+  padding: 7px;
+  color: white;
+}
+
 //cart icon with count
 .badge {
   padding-left: 9px;
