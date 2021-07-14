@@ -52,7 +52,14 @@ ul.products li, ul.basket li{
   padding: 10px;
   text-align: left;
 }
-ul.products li:nth-child(odd), ul.basket li:nth-child(odd) {
+
+ul.todo li{
+  list-style: none;
+  margin: 7px 0;
+  padding: 10px;
+  text-align: center;
+}
+ul.products li:nth-child(odd), ul.basket li:nth-child(odd), ul.todo li:nth-child(odd) {
   background: #f9f9f9;
 }
 // ul.products li:hover:before {
@@ -82,6 +89,13 @@ ul.products li:nth-child(odd), ul.basket li:nth-child(odd) {
 
 .clear-basket{
   float: right;
+}
+.fa-check{
+  color: rgb(10, 184, 10);
+}
+
+.fa-times{
+  color: rgb(192, 30, 30);
 }
 
 //cart icon with count

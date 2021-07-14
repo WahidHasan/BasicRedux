@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import { BasketState } from "../../core/redux/store";
 import Home from "../home/home.component";
+import TestComponent from "../test/test.component";
 
 
 const Navigation = () => {
@@ -20,9 +21,9 @@ const Navigation = () => {
             Basket
           </NavLink>
         </li>
-        {/* <li>
-          <NavLink to="/infinite-scroll-pagination">With Api</NavLink>
-        </li> */}
+        <li>
+          <NavLink to="/test">With Api</NavLink>
+        </li>
         <i className="fa clear-basket">&#xf07a;</i>
         <span className='badge badge-warning clear-basket' id='lblCartCount'> {totalProducts} </span>
         {/* <span className="clear-basket"><i className="fas fa-trash"  area-hidden="true"></i></span> */}
@@ -30,10 +31,10 @@ const Navigation = () => {
       <div className="content">
         <Switch>
           <Route exact path="/" component={Home} />
-          {/* <Route
-            path="/infinite-scroll-pagination"
-            component={}
-          /> */}
+          <Route
+            path="/test"
+            component={TestComponent}
+          />
         </Switch>
       </div>
     </div>

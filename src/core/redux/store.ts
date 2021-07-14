@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { combineReducers } from 'redux'
 import { BasketReducer } from './slices/basket';
+import { TestReducer } from './slices/test-api';
 
 const BasicCartReducer = combineReducers({
- basket: BasketReducer
+ basket: BasketReducer,
+ test: TestReducer
 })
 
 export const store = configureStore({
